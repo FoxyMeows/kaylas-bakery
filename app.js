@@ -49,7 +49,6 @@ app.get('/cart', function(req,res){
 
 
 
-
 // Listener for connecting to local server
 app.listen(3000, function(){
     console.log("Server started on port 3000")
