@@ -4,13 +4,20 @@
   "description": "A website created for Kayla's bakery. It is meant to help showcase her products.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass-watch": "sass --no-source-map --watch styles/main.scss public/css/main.css",
+    "nodemon-watch": "nodemon app.js -e *",
+    "dev": "npm-run-all --parallel sass-watch nodemon-watch"
   },
   "author": "Nicole Adamson",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "bootstrap": "^5.0.2",
     "ejs": "^3.1.9",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "npm-run-all": "^4.1.5",
+    "path": "^0.12.7",
+    "sass": "^1.69.4"
   }
 }

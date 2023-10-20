@@ -1,0 +1,250 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head> -->
+    <!-- Required meta tags -->
+    <!-- <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no" -->
+    <!-- /> -->
+    <!-- <title>Kayla's Bakery!</title> -->
+    <!-- Box Icons -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    /> -->
+    <!-- Bootstrap-->
+    <!-- <link rel="stylesheet" href="../public/css/main.css"> -->
+    <!-- <link rel="stylesheet" href="../public/css/bootstrap.min.css" /> -->
+    <!-- <script src="../public/js/bootstrap.bundle.min.js"></script>
+    <script src="../public/js/jquery.min.js"></script> -->
+
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    /> -->
+    <!-- CSS -->
+    <!-- <link href="../public/css/styles.css" rel="stylesheet" /> -->
+  <!-- </head> -->
+  <body>
+    <!-- navbar -->
+    <%- include('partials/navbar');-%>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="video_container">
+        <video
+          autoplay
+          loop
+          muted
+          plays-inline
+          class="back-video"
+          src="images/cropped-piping.mp4"
+          type="video/mp4"
+        ></video>
+      </div>
+      <div class="hero-text">
+        <h1>Maybe Cakes</h1>
+      </div>
+    </section>
+
+    <!-- Accordion start -->
+<div class="container">
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Accordion Item #1
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Accordion Item #2
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Accordion Item #3
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Accordion end -->
+
+    <!----------------------------------------------------- Home Page Sections -------------------------------------------->
+    <!-- Specialty Cakes -->
+    <section id="" class="section specialties">
+      <div class="container">
+        <h1>Specialty Cakes</h1>
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <div class="card mx-auto">
+              <img src="images/cake-4.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">Chocolate Drip Cake</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut
+                  eum similique repellat a laborum.
+                </p>
+                <a href="/order" class="btn btn-outline-success btn-sm"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="card mx-auto">
+              <img src="images/cake.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">Rustic Cake</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut
+                  eum similique repellat a laborum.
+                </p>
+                <a href="/order" class="btn btn-outline-success btn-sm"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="card mx-auto">
+              <img src="images/cake-5-wide.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">Mini Cake</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut
+                  eum similique repellat a laborum.
+                </p>
+                <a href="/order" class="btn btn-outline-success btn-sm"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Offers -->
+    <!-- link to make better cards: https://www.youtube.com/watch?v=E2TW4ZxXrsI&ab_channel=CodingSnow  -->
+    <section id="special-offers">
+      <div class="section offers">
+        <div class="container">
+          <div>
+            <h1>Special Offers</h1>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 mb-6">
+              <div class="card mx-auto">
+                <img src="images/cookie.jpg" alt="" class="card-img-top" />
+                <div class="card-body">
+                  <h5 class="card-title">Chocolate Chip Cookies</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut
+                    eum similique repellat a laborum.
+                  </p>
+                  <a href="/order" class="btn btn-outline-success btn-sm"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 mb-6">
+              <div class="card mx-auto">
+                <img src="images/cupcake.jpg" alt="" class="card-img-top" />
+                <div class="card-body">
+                  <h5 class="card-title">Cupcakes</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut
+                    eum similique repellat a laborum.
+                  </p>
+                  <a href="/order" class="btn btn-outline-success btn-sm"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Creations -->
+    <section id="my-creations">
+      <div class="section creations">
+        <div class="container">
+          <div class="row">
+            <div class="">
+              <h1>My Creations</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="pin_container">
+              <div class="mason-card card_small">
+                <img src="images/cupcake.jpg" alt="cupcake" />
+              </div>
+              <div class="mason-card card_medium">
+                <img src="images/gingerbread.jpg" alt="gingerbread" />
+              </div>
+              <div class="mason-card card_small">
+                <img src="images/cake-4.jpg" alt="cake" />
+              </div>
+              <div class="mason-card card_medium">
+                <img src="images/cupcake-2.jpg" alt="cupcake" />
+              </div>
+              <div class="mason-card card_large">
+                <img src="images/pie-2.jpg" alt="pie" />
+              </div>
+              <div class="mason-card card_small">
+                <img src="images/cake-slice.jpg" alt="cake" />
+              </div>
+              <div class="mason-card card_medium">
+                <img src="images/cake.jpg" alt="cake" />
+              </div>
+              <div class="mason-card card_large">
+                <img src="images/cake-3.jpg" alt="cake" />
+              </div>
+              <div class="mason-card card_medium">
+                <img src="images/pie.jpg" alt="pie" />
+              </div>
+              <div class="mason-card card_small">
+                <img src="images/cookie.jpg" alt="cupcake" />
+              </div>
+              <div class="mason-card card_medium">
+                <img src="images/cake-2.jpg" alt="cake" />
+              </div>
+              <div class="mason-card card_large">
+                <img src="images/macrones.jpg" alt="macrones" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <%- include('partials/footer');-%>
+  </body>
+</html>

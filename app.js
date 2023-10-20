@@ -1,56 +1,62 @@
-
-// Requiring 
-const express = require('express');
-const bodyParser = require('body-parser');
-
+// Requiring
+const express = require("express");
+const bodyParser = require("body-parser");
+const path = require("path");
 
 const app = express();
 
-app.set('view engine', 'ejs');
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static('public')); 
-app.set('view engine', 'ejs'); //allows me to use ejs
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "public"))); //adds a global middleware for serving static files from my express application. Public is the folder that holds my static files.
+app.set("view engine", "ejs"); //allows me to use ejs
+app.set("views", path.join(__dirname, "/views"));
 
 // Root Route connected to local server
-app.get('/', function(req, res){
-    res.sendFile(__dirname + "/home.html");
+app.get("/", function (req, res) {
+  res.render("home.ejs");
 });
 
 // app.get for pages
-app.get('/header', function(req,res){
-    res.render('header');
-});
+app
+  .route("/about")
+  .get(function (req, res) {
+    res.render("about");
+  })
+  .post()
+  .delete();
 
-app.get('/footer', function(req,res){
-    res.render('footer');
-});
+app
+  .route("/contact")
+  .get(function (req, res) {
+    res.render("contact");
+  })
+  .post()
+  .delete();
 
-app.get('/about', function(req,res){
-    res.render('about');
-});
+app
+  .route("/order")
+  .get(function (req, res) {
+    res.render("order");
+  })
+  .post()
+  .delete();
 
-app.get('/contact', function(req,res){
-    res.render('contact');
-});
+app
+  .route("/cart")
+  .get(function (req, res) {
+    res.render("cart");
+  })
+  .post()
+  .delete();
 
-app.get('/order', function(req,res){
-    res.render('order');
-});
-
-app.get('/cart', function(req,res){
-    res.render('cart');
-});
-
-
-
-
-
-
-
-
+app
+  .route("/menu")
+  .get(function (req, res) {
+    res.render("menu");
+  })
+  .post()
+  .delete();
 
 // Listener for connecting to local server
-app.listen(3000, function(){
-    console.log("Server started on port 3000")
-  })
-  
+app.listen(3000, function () {
+  console.log("Server started on port 3000");
+});

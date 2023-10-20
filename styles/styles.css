@@ -1,0 +1,549 @@
+/* Google Fonts Import */
+@import url("https://fonts.googleapis.com/css2?family=Borel&family=Dancing+Script:wght@400;700&family=Grandiflora+One&family=Roboto:wght@300;400;700&family=Updock&display=swap");
+
+/* Some Variables  */
+/* This is somethting I didn't previously know that I could do! */
+:root {
+  --pink-color: #ff91a4;
+  --seafoam-color: #5fcac7;
+  --green-color: #7ecfa9;
+  --blue-color: #8cc0d3;
+  --purple-color: #b2a4ff;
+  --light-pink: rgb(255, 232, 236);
+  --gray: #575757;
+
+  /* Pinterest Masonry Variables. Will be used in a CSS Grid.*/
+  --card_width: 250px; /*Each mason card will be 250px wide, regardless of height*/
+  --row_increment: 10px; /*The grid will be set in 10px row increments. This means each card will be divided into 10px row increments.*/
+  --card_border_radius: 16px;
+  --card_small: 26; /*26 ROWS. Each row is 10px high. So a small card is set to be 260px high!*/
+  --card_medium: 33; /*Medium cards will be 330px high following the above logic.*/
+  --card_large: 45; /*Large cards will be 450px high!*/
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: rgb(62, 62, 62);
+  height: 100%;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background-image: url("/images/sprinkles-bg.jpg");
+}
+
+h1 {
+  font-family: "Borel", cursive;
+  padding-bottom: 30px;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+}
+
+.inner-outline {
+  outline: 1px solid rgb(255, 255, 255);
+  outline-offset: -30px;
+}
+
+/******** CUSTOM BUTTONS ********/
+.button-74 {
+  margin: 20px;
+  background-color: rgb(255, 232, 236);
+  border: 2px solid #575757;
+  border-radius: 30px;
+  box-shadow: #575757 4px 4px 0 0;
+  color: #575757;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-74:hover {
+  background-color: #fff;
+}
+
+.button-74:active {
+  box-shadow: #575757 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+/* Sections */
+.section {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  padding: 7% 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.translucent {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.body-position {
+  padding-top: 100px;
+}
+
+/************************************************ Navbar *************************************/
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--pink-color);
+  box-shadow: 0 8px 11px rgb(14 55 54 / 25%);
+  /* padding: 20px 100px; */
+  transition: 0.5s;
+}
+.navbar a {
+  font-family: "Borel", cursive;
+  font-weight: 400px;
+  color: white;
+  font-size: 1.35rem;
+}
+.navbar a:hover {
+  background: white;
+  border-radius: 5rem;
+  color: var(--pink-color);
+  transition: background 0.7s;
+}
+
+.navbar .dropdown-toggle {
+  /* This is to make sure the Shop dropdown link stays white when clicked on */
+  color: #ffffff;
+}
+
+.navbar .dropdown-menu a {
+  color: var(--pink-color);
+}
+.navbar .dropdown-menu a:hover {
+  color: white;
+  background: var(--pink-color);
+  border-radius: 5rem;
+  color: white;
+  transition: background 0.7s;
+}
+
+.navbar-toggler-icon {
+  color: white;
+  font-size: 1.7rem;
+}
+
+/************************************************* Hero Section ***********************************/
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  padding: 0 5%;
+  margin-top: 63px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video_container {
+  overflow: hidden;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.video_container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+}
+
+.hero-text {
+  text-align: center;
+}
+.hero-text h1 {
+  color: white;
+  font-size: 150px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.8);
+}
+
+/********************************************* Card Settings *********************************************/
+.card {
+  /* Add shadows to create the "card" effect */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  text-align: center;
+  width: 275px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 15px; /* 5px rounded corners */
+  margin: 20px 0;
+  transition: all 0.6s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  transform: scale(1.15);
+  box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 15px 15px 0px 0px;
+  border-radius: 15px 15px 0px 0px;
+  width: 100%;
+  min-height: 20vh;
+  object-fit: cover;
+}
+
+/*********************************** Specialty Items *******************************/
+
+/*********************************** Special Offers *********************************/
+.offers {
+  background-color: var(--seafoam-color);
+}
+/*********************************************** My Creations ********************************************/
+.creations {
+  background-color: white;
+}
+
+.pin_container {
+  margin: 0;
+  padding: 0;
+  width: 70vw; /*vw equals a percentage of the viewport width!*/
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: grid; /*Using CSS grid to generate cards*/
+  grid-template-columns: repeat(
+    auto-fill,
+    var(--card_width)
+  ); /*autofills till it hits my specified width (variable*/
+  grid-auto-rows: var(
+    --row_increment
+  ); /*auto rows until it hits my specified value*/
+  justify-content: center;
+
+  /* background-color: black; */
+}
+.mason-card {
+  /*Card Dimensions*/
+  padding: 0;
+  margin: 15px 10px; /*This margin's values count toward the grid row/column pixels!!!*/
+  border-radius: var(--card_border_radius);
+  transition: all 0.5s;
+}
+
+.mason-card:hover {
+  transform: scale(1.13);
+}
+
+.card_small {
+  grid-row-end: span var(--card_small);
+}
+.card_medium {
+  grid-row-end: span var(--card_medium);
+}
+.card_large {
+  grid-row-end: span var(--card_large);
+}
+
+.mason-card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+}
+
+/************************************ Footer ***************************************/
+.footer {
+  background-color: var(--pink-color);
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  padding: 3% 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer h1 {
+  color: white;
+  margin-top: 25px;
+}
+
+.form-group {
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons i {
+  font-size: 50px;
+  margin: 10px 25px;
+  color: #ffffffe1;
+}
+
+/********************************** Cart Page *********************************/
+.payment-info {
+  background: blue;
+  padding: 10px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.product-details {
+  padding: 10px;
+}
+
+.cart {
+  background: #fff;
+}
+
+.p-about {
+  font-size: 12px;
+}
+
+.table-shadow {
+  -webkit-box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.42);
+  box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.42);
+}
+
+.type {
+  font-weight: 400;
+  font-size: 10px;
+}
+
+label.radio {
+  cursor: pointer;
+}
+
+label.radio input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+label.radio span {
+  padding: 1px 12px;
+  border: 2px solid #ada9a9;
+  display: inline-block;
+  color: #8f37aa;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 300;
+}
+
+label.radio input:checked + span {
+  border-color: #fff;
+  background-color: blue;
+  color: #fff;
+}
+
+.credit-inputs {
+  background: rgb(102, 102, 221);
+  color: #fff !important;
+  border-color: rgb(102, 102, 221);
+}
+
+.credit-inputs::placeholder {
+  color: #fff;
+  font-size: 13px;
+}
+
+.credit-card-label {
+  font-size: 9px;
+  font-weight: 300;
+}
+
+.form-control.credit-inputs:focus {
+  background: rgb(102, 102, 221);
+  border: rgb(102, 102, 221);
+}
+
+.line {
+  border-bottom: 1px solid rgb(102, 102, 221);
+}
+
+.information span {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.information {
+  margin-bottom: 5px;
+}
+
+.items {
+  -webkit-box-shadow: 5px 5px 4px -1px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 5px 4px -1px rgba(0, 0, 0, 0.08);
+}
+
+.spec {
+  font-size: 11px;
+}
+
+/****************** Flip Card ****************************/
+.flip-box {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  cursor: pointer;
+  margin: 75px;
+}
+
+.flip-box:hover .flip-box-front {
+  transform: rotateY(-180deg);
+  transform-style: preserve-3d;
+}
+.flip-box:hover .flip-box-back {
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+}
+
+.flip-box-front,
+.flip-box-back {
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  aspect-ratio: 1/1;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  transform: rotateY("0deg");
+  transform-style: preserve-3d;
+}
+
+.flip-box-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+}
+
+/* Flip-box Text */
+.flip-box .inner {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 50px;
+  outline: 1px solid transparent;
+  perspective: inherit;
+  z-index: 2;
+  transform: translateY(-50%) translateZ(60px) scale(0.94);
+  top: 50%;
+}
+
+.flip-box-header {
+  font-size: 30px;
+  font-family: "Borel", cursive;
+}
+
+.flip-box p {
+  font-size: 20px;
+  line-height: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.inner i {
+  font-size: 75px;
+  padding-top: 15px;
+}
+
+.color-white {
+  color: rgb(0, 0, 0);
+}
+
+.flip-box-button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 25px;
+  padding: 15px 20px;
+  text-transform: uppercase;
+}
+
+/* Smaller font at breakpoint 1199px */
+@media (max-width: 1199px) and (min-width: 910px) {
+  .flip-box-header {
+    font-size: 25px;
+  }
+  .flip-box p {
+    font-size: 15px;
+  }
+  .inner i {
+    font-size: 45px;
+  }
+  .flip-box-button {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 10px 15px;
+  }
+}
+
+/* @media (max-width: 909px) {
+  .flip-box-front,
+  .flip-box-back {
+    max-width: 517px;
+  }
+} */
+
+/******************* Media Ratio Settings *********************/
+@media (min-aspect-ratio: 16/9) {
+  .back-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .back-video {
+    width: auto;
+    height: 100%;
+  }
+}
