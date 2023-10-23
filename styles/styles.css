@@ -1,6 +1,5 @@
 /* Google Fonts Import */
-@import url("https://fonts.googleapis.com/css2?family=Borel&family=Dancing+Script:wght@400;700&family=Grandiflora+One&family=Roboto:wght@300;400;700&family=Updock&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Borel&family=Dancing+Script:wght@400;700&family=Grandiflora+One&family=Macondo&family=Merienda:wght@400;600;800&family=Roboto:wght@300;400;700&family=Updock&display=swap");
 /* Some Variables  */
 /* This is somethting I didn't previously know that I could do! */
 :root {
@@ -83,6 +82,7 @@ img {
     padding: 0 25px;
   }
 }
+/* button end */
 
 /* Sections */
 .section {
@@ -287,6 +287,9 @@ img {
 }
 
 /************************************ Footer ***************************************/
+footer {
+  padding-top: 14vh;
+}
 .footer {
   background-color: var(--pink-color);
   width: 100%;
@@ -424,7 +427,7 @@ label.radio input:checked + span {
   transform-style: preserve-3d;
   perspective: 1000px;
   cursor: pointer;
-  margin: 75px;
+  margin: 15px;
 }
 
 .flip-box:hover .flip-box-front {
@@ -442,7 +445,7 @@ label.radio input:checked + span {
   background-position: center;
   border-radius: 8px;
   aspect-ratio: 1/1;
-  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.9s cubic-bezier(0.4, 0.2, 0.2, 1);
   backface-visibility: hidden;
 }
 
@@ -474,8 +477,16 @@ label.radio input:checked + span {
 }
 
 .flip-box-header {
-  font-size: 30px;
-  font-family: "Borel", cursive;
+  font-size: 32px;
+  line-height: 1.5;
+  letter-spacing: 0.2rem;
+  padding-top: 5px;
+  font-family: "Merienda", cursive;
+  font-weight: 800;
+  color: white;
+  -webkit-text-stroke: 1px #f8f8f8;
+  text-shadow: 0px 2px 6px #000000;
+  /* text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); */
 }
 
 .flip-box p {
@@ -485,13 +496,23 @@ label.radio input:checked + span {
   font-weight: 400;
 }
 
+.front-header {
+  border-radius: 20px;
+  outline: 1px solid rgba(255, 255, 255, 0.872);
+  padding: 0.2rem;
+  background-color: #ffffff63;
+}
+
 .inner i {
   font-size: 75px;
-  padding-top: 15px;
+  padding-top: 20px;
+  color: white;
+  -webkit-text-stroke: 1px #f8f8f8;
+  text-shadow: 0px 1px 4px #000000;
 }
 
 .color-white {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .flip-box-button {
@@ -505,6 +526,35 @@ label.radio input:checked + span {
   margin-top: 25px;
   padding: 15px 20px;
   text-transform: uppercase;
+}
+
+/******************* Menu ************************/
+
+.menu .row {
+  background-color: white;
+}
+
+.menu-header {
+  /* This needs a background of some kind? */
+  padding-top: 200px;
+}
+
+.menu-title {
+  font-family: "Merienda", cursive;
+  font-weight: 800;
+  text-align: left;
+  -webkit-text-stroke: rgb(62, 62, 62);
+  position: relative;
+  max-width: auto;
+  padding: 180px 0 30px 0;
+}
+.menu-title:after {
+  content: "";
+  height: 2.5px;
+  background: rgb(79, 79, 79);
+  display: block;
+  top: 50%;
+  right: 0;
 }
 
 /* Smaller font at breakpoint 1199px */
