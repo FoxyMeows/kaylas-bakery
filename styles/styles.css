@@ -7,7 +7,7 @@
   --seafoam-color: #5fcac7;
   --green-color: #7ecfa9;
   --blue-color: #8cc0d3;
-  --purple-color: #b2a4ff;
+  --purple-color: #c7bdff;
   --light-pink: rgb(255, 232, 236);
   --gray: #575757;
 
@@ -32,7 +32,7 @@ body {
 }
 
 h1 {
-  font-family: "Borel", cursive;
+  font-family: "Merienda", cursive;
   padding-bottom: 30px;
 }
 
@@ -187,6 +187,7 @@ img {
   text-align: center;
 }
 .hero-text h1 {
+  font-family: "Borel", cursive;
   color: white;
   font-size: 150px;
   text-align: center;
@@ -228,7 +229,10 @@ img {
 }
 
 /*********************************** Specialty Items *******************************/
-
+.specialty .container {
+  padding-top: 20vh;
+  padding-bottom: 30vh;
+}
 /*********************************** Special Offers *********************************/
 .offers {
   background-color: var(--seafoam-color);
@@ -286,6 +290,38 @@ img {
   border-radius: 16px;
 }
 
+/********************** Ad section (Home Page)**********************/
+.ad-order {
+  background-color: var(--seafoam-color);
+  min-height: 800px;
+  min-width: 100vw;
+  /* margin-top: 200px; */
+  position: relative;
+  display: flex;
+}
+.ad-container {
+  /* padding: 50px 0; */
+}
+
+.ad-details {
+  padding: 0 20px;
+  line-height: 2rem;
+}
+
+.ad-image {
+  height: 500px;
+  width: 600px;
+  border: solid 1px var(--blue-color);
+  background-color: rgb(255, 230, 230);
+}
+
+.ad-header {
+}
+
+.ad-order button {
+  width: 230px;
+}
+
 /************************************ Footer ***************************************/
 footer {
   padding-top: 14vh;
@@ -306,14 +342,14 @@ footer {
   margin-top: 25px;
 }
 
-.form-group {
+footer .form-group {
   margin: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.social-icons i {
+footer .social-icons i {
   font-size: 50px;
   margin: 10px 25px;
   color: #ffffffe1;
@@ -527,6 +563,29 @@ label.radio input:checked + span {
   padding: 15px 20px;
   text-transform: uppercase;
 }
+.flip-box-button:active {
+  box-shadow: 0px 4px 8px #eeeeee;
+  transform: translate(2px, 2px);
+}
+
+/* Smaller font at breakpoint 1199px */
+@media (max-width: 1199px) and (min-width: 910px) {
+  .flip-box-header {
+    font-size: 20px;
+  }
+  .flip-box p {
+    font-size: 15px;
+  }
+  .inner i {
+    font-size: 45px;
+  }
+  .flip-box-button {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 2px;
+    padding: 10px 15px;
+  }
+}
 
 /******************* Menu ************************/
 
@@ -557,31 +616,189 @@ label.radio input:checked + span {
   right: 0;
 }
 
-/* Smaller font at breakpoint 1199px */
-@media (max-width: 1199px) and (min-width: 910px) {
-  .flip-box-header {
-    font-size: 25px;
-  }
-  .flip-box p {
-    font-size: 15px;
-  }
-  .inner i {
-    font-size: 45px;
-  }
-  .flip-box-button {
-    font-size: 15px;
-    font-weight: bold;
-    margin-top: 15px;
-    padding: 10px 15px;
-  }
+/**************** Custom Order Page ***************/
+
+.order-header {
+  padding-top: 100px;
 }
 
-/* @media (max-width: 909px) {
-  .flip-box-front,
-  .flip-box-back {
-    max-width: 517px;
-  }
-} */
+.form-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 50vh;
+}
+
+.form-holder .form-content {
+  width: 70vw;
+  position: relative;
+  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 60px;
+}
+
+.form-content .form-items {
+  background-color: var(--blue-color);
+  border: 3px solid #fff;
+  padding: 40px;
+  display: inline-block;
+  width: 100%;
+  min-width: 540px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  text-align: left;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.form-content h3 {
+  color: #fff;
+  text-align: left;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-content h3.form-title {
+  margin-bottom: 30px;
+}
+
+.form-content p {
+  color: #fff;
+  text-align: left;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+
+.form-content label,
+.was-validated .form-check-input:invalid ~ .form-check-label,
+.was-validated .form-check-input:valid ~ .form-check-label {
+  color: #fff;
+}
+
+.form-content input[type="text"],
+.form-content input[type="password"],
+.form-content input[type="email"],
+.form-content input[type="file"],
+.form-content textarea,
+.form-content select {
+  width: 100%;
+  padding: 9px 20px;
+  text-align: left;
+  border: 0;
+  outline: 0;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+  color: #8d8d8d;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-top: 16px;
+}
+
+.form-content input[type="file"] {
+  margin-top: 0;
+}
+
+.btn-primary {
+  background-color: #6c757d;
+  outline: none;
+  border: 0px;
+  box-shadow: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #495056;
+  outline: none !important;
+  border: none !important;
+  box-shadow: none;
+}
+
+.form-content textarea {
+  position: static !important;
+  width: 100%;
+  padding: 8px 20px;
+  border-radius: 6px;
+  text-align: left;
+  background-color: #fff;
+  border: 0;
+  font-size: 15px;
+  font-weight: 300;
+  color: #8d8d8d;
+  outline: none;
+  resize: none;
+  height: 120px;
+  -webkit-transition: none;
+  transition: none;
+  margin-bottom: 14px;
+}
+
+.form-content textarea:hover,
+.form-content textarea:focus {
+  border: 0;
+  background-color: #ebeff8;
+  color: #8d8d8d;
+}
+
+.mv-up {
+  margin-top: -9px !important;
+  margin-bottom: 8px !important;
+}
+
+.invalid-feedback {
+  color: #ff606e;
+}
+
+.valid-feedback {
+  color: #2acc80;
+}
+
+/**************************** Product Order Page ****************************/
+.product-order {
+  background-color: white;
+  min-height: 90vh;
+  min-width: 80vw;
+  border: solid 1px var(--blue-color);
+  margin-top: 200px;
+}
+
+.product-header {
+  margin-top: 130px;
+}
+
+.product-image {
+  max-height: 700px;
+  max-width: 600px;
+  border: solid 1px var(--blue-color);
+  background-color: rgb(255, 230, 230);
+  margin: 100px 20px 20px 20px;
+}
+.product-details {
+  text-align: left;
+  padding: 0 20px;
+  line-height: 2rem;
+}
+
+.product-order button {
+  width: 285px;
+  margin-left: 0;
+}
 
 /******************* Media Ratio Settings *********************/
 @media (min-aspect-ratio: 16/9) {

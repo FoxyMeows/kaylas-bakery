@@ -33,9 +33,9 @@ app
   .delete();
 
 app
-  .route("/order")
+  .route("/custom-order")
   .get(function (req, res) {
-    res.render("order");
+    res.render("custom-order");
   })
   .post()
   .delete();
@@ -52,6 +52,14 @@ app
   .route("/menu")
   .get(function (req, res) {
     res.render("menu");
+  })
+  .post()
+  .delete();
+
+app
+  .route("/product-order")
+  .get(function (req, res) {
+    res.render("product-order");
   })
   .post()
   .delete();
