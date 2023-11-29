@@ -15,54 +15,64 @@ app.get("/", function (req, res) {
   res.render("home.ejs");
 });
 
-// app.get for pages
+// About Page
 app
   .route("/about")
   .get(function (req, res) {
     res.render("about");
   })
-  .post()
-  .delete();
+  .post();
 
-app
-  .route("/contact")
-  .get(function (req, res) {
-    res.render("contact");
-  })
-  .post()
-  .delete();
-
+// Custom Order Page
 app
   .route("/custom-order")
   .get(function (req, res) {
     res.render("custom-order");
-  })
-  .post()
-  .delete();
 
+    // const inputs = document.querySelectorAll(".input");
+
+    // function focusFunc() {
+    //   let parent = this.parentNode;
+    //   parent.classList.add("focus");
+    // }
+
+    // function blurFunc() {
+    //   let parent = this.parentNode;
+    //   if (this.value == "") {
+    //     parent.classList.remove("focus");
+    //   }
+    // }
+
+    // inputs.forEach((input) => {
+    //   input.addEventListener("focus", focusFunc);
+    //   input.addEventListener("blur", blurFunc);
+    // });
+  })
+  .post();
+
+// Checkout Page
 app
   .route("/cart")
   .get(function (req, res) {
     res.render("cart");
   })
-  .post()
-  .delete();
+  .post();
 
+// Menu Page
 app
   .route("/menu")
   .get(function (req, res) {
     res.render("menu");
   })
-  .post()
-  .delete();
+  .post();
 
+// Product Page
 app
   .route("/product-order")
   .get(function (req, res) {
     res.render("product-order");
   })
-  .post()
-  .delete();
+  .post();
 
 // Listener for connecting to local server
 app.listen(3000, function () {

@@ -1,0 +1,36 @@
+/* Wavy border generator link: https://css-generators.com/wavy-shapes/ */
+
+.wavy {
+  --mask: radial-gradient(19.8px at 50% 28px, #000 99%, #0000 101%)
+      calc(50% - 28px) 0/56px 51% repeat-x,
+    radial-gradient(19.8px at 50% -14px, #0000 99%, #000 101%) 50% 14px/56px
+      calc(51% - 14px) repeat-x,
+    radial-gradient(19.8px at 50% calc(100% - 28px), #000 99%, #0000 101%) 50%
+      100%/56px 51% repeat-x,
+    radial-gradient(19.8px at 50% calc(100% + 14px), #0000 99%, #000 101%)
+      calc(50% - 28px) calc(100% - 14px) / 56px calc(51% - 14px) repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.wavy-bottom {
+  --mask: radial-gradient(19.8px at 50% calc(100% - 28px), #000 99%, #0000 101%)
+      calc(50% - 28px) 0/56px 100%,
+    radial-gradient(19.8px at 50% calc(100% + 14px), #0000 99%, #000 101%) 50%
+      calc(100% - 14px) / 56px 100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.deep-wave {
+  --mask: radial-gradient(22.25px at 50% 28.35px, #000 99%, #0000 101%)
+      calc(50% - 42px) 0/84px 51% repeat-x,
+    radial-gradient(22.25px at 50% -7.35px, #0000 99%, #000 101%) 50% 21px/84px
+      calc(51% - 21px) repeat-x,
+    radial-gradient(22.25px at 50% calc(100% - 28.35px), #000 99%, #0000 101%)
+      50% 100%/84px 51% repeat-x,
+    radial-gradient(22.25px at 50% calc(100% + 7.35px), #0000 99%, #000 101%)
+      calc(50% - 42px) calc(100% - 21px) / 84px calc(51% - 21px) repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}

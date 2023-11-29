@@ -28,7 +28,7 @@ body {
   width: 100%;
   position: relative;
   text-align: center;
-  background-image: url("/images/sprinkles-bg.jpg");
+  /* background-image: url("/images/sprinkles-bg.jpg"); */
 }
 
 h1 {
@@ -113,19 +113,19 @@ img {
   justify-content: space-between;
   background-color: var(--pink-color);
   box-shadow: 0 8px 11px rgb(14 55 54 / 25%);
-  /* padding: 20px 100px; */
   transition: 0.5s;
 }
+
 .navbar a {
   font-family: "Borel", cursive;
   font-weight: 400px;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 1.35rem;
 }
 .navbar a:hover {
-  background: white;
+  color: rgb(255, 255, 255);
+  border: 2px solid #fafafa;
   border-radius: 5rem;
-  color: var(--pink-color);
   transition: background 0.7s;
 }
 
@@ -233,11 +233,17 @@ img {
   padding-top: 20vh;
   padding-bottom: 30vh;
 }
+
+.specialty h1,
+.specialty p {
+  margin-bottom: 30px;
+}
+
 /*********************************** Special Offers *********************************/
 .offers {
   background-color: var(--seafoam-color);
 }
-/*********************************************** My Creations ********************************************/
+/******************************* My Creations ********************************************/
 .creations {
   background-color: white;
 }
@@ -299,9 +305,6 @@ img {
   position: relative;
   display: flex;
 }
-.ad-container {
-  /* padding: 50px 0; */
-}
 
 .ad-details {
   padding: 0 20px;
@@ -313,9 +316,7 @@ img {
   width: 600px;
   border: solid 1px var(--blue-color);
   background-color: rgb(255, 230, 230);
-}
-
-.ad-header {
+  margin: 0 20px;
 }
 
 .ad-order button {
@@ -356,114 +357,70 @@ footer .social-icons i {
 }
 
 /********************************** Cart Page *********************************/
-.payment-info {
-  background: blue;
-  padding: 10px;
-  border-radius: 6px;
-  color: #fff;
-  font-weight: bold;
+
+/******************* Menu ************************/
+
+.menu .row {
+  /* background-color: white; */
 }
 
-.product-details {
-  padding: 10px;
+.menu-header {
+  /* This needs a background of some kind? */
+  padding-top: 200px;
 }
 
-.cart {
-  background: #fff;
+.menu-title {
+  font-family: "Merienda", cursive;
+  font-weight: 800;
+  text-align: left;
+  -webkit-text-stroke: rgb(62, 62, 62);
+  position: relative;
+  max-width: auto;
+  padding: 180px 0 30px 0;
+}
+.menu-title:after {
+  content: "";
+  height: 2.5px;
+  background: rgb(79, 79, 79);
+  display: block;
+  top: 50%;
+  right: 0;
 }
 
-.p-about {
-  font-size: 12px;
+.menu .container {
+  max-width: 80vw;
 }
-
-.table-shadow {
-  -webkit-box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.42);
-  box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.42);
-}
-
-.type {
-  font-weight: 400;
-  font-size: 10px;
-}
-
-label.radio {
-  cursor: pointer;
-}
-
-label.radio input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-label.radio span {
-  padding: 1px 12px;
-  border: 2px solid #ada9a9;
-  display: inline-block;
-  color: #8f37aa;
-  border-radius: 3px;
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 300;
-}
-
-label.radio input:checked + span {
-  border-color: #fff;
-  background-color: blue;
-  color: #fff;
-}
-
-.credit-inputs {
-  background: rgb(102, 102, 221);
-  color: #fff !important;
-  border-color: rgb(102, 102, 221);
-}
-
-.credit-inputs::placeholder {
-  color: #fff;
-  font-size: 13px;
-}
-
-.credit-card-label {
-  font-size: 9px;
-  font-weight: 300;
-}
-
-.form-control.credit-inputs:focus {
-  background: rgb(102, 102, 221);
-  border: rgb(102, 102, 221);
-}
-
-.line {
-  border-bottom: 1px solid rgb(102, 102, 221);
-}
-
-.information span {
-  font-size: 12px;
-  font-weight: 500;
-}
-
-.information {
-  margin-bottom: 5px;
-}
-
-.items {
-  -webkit-box-shadow: 5px 5px 4px -1px rgba(0, 0, 0, 0.25);
-  box-shadow: 5px 5px 4px -1px rgba(0, 0, 0, 0.08);
-}
-
-.spec {
-  font-size: 11px;
+@media (max-width: 1025px) and (min-width: 850px) {
+  .menu .container {
+    max-width: 95vw;
+  }
 }
 
 /****************** Flip Card ****************************/
+
+.menu-card-bottom {
+  /* padding-bottom: 20px; */
+  background-color: #ffffff;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  /* text-align: left; */
+  line-height: 0;
+  font-family: "Merienda", cursive;
+  color: rgb(72, 72, 72);
+  border-radius: 10px;
+}
+
+.menu-card-bottom h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+}
+
 .flip-box {
   transform-style: preserve-3d;
   perspective: 1000px;
   cursor: pointer;
-  margin: 15px;
+  margin-top: 15px;
 }
 
 .flip-box:hover .flip-box-front {
@@ -569,7 +526,7 @@ label.radio input:checked + span {
 }
 
 /* Smaller font at breakpoint 1199px */
-@media (max-width: 1199px) and (min-width: 910px) {
+@media (max-width: 1199px) and (min-width: 576px) {
   .flip-box-header {
     font-size: 20px;
   }
@@ -585,188 +542,6 @@ label.radio input:checked + span {
     margin-top: 2px;
     padding: 10px 15px;
   }
-}
-
-/******************* Menu ************************/
-
-.menu .row {
-  background-color: white;
-}
-
-.menu-header {
-  /* This needs a background of some kind? */
-  padding-top: 200px;
-}
-
-.menu-title {
-  font-family: "Merienda", cursive;
-  font-weight: 800;
-  text-align: left;
-  -webkit-text-stroke: rgb(62, 62, 62);
-  position: relative;
-  max-width: auto;
-  padding: 180px 0 30px 0;
-}
-.menu-title:after {
-  content: "";
-  height: 2.5px;
-  background: rgb(79, 79, 79);
-  display: block;
-  top: 50%;
-  right: 0;
-}
-
-/**************** Custom Order Page ***************/
-
-.order-header {
-  padding-top: 100px;
-}
-
-.form-holder {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 50vh;
-}
-
-.form-holder .form-content {
-  width: 70vw;
-  position: relative;
-  text-align: center;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  align-items: center;
-  padding: 60px;
-}
-
-.form-content .form-items {
-  background-color: var(--blue-color);
-  border: 3px solid #fff;
-  padding: 40px;
-  display: inline-block;
-  width: 100%;
-  min-width: 540px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  text-align: left;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-
-.form-content h3 {
-  color: #fff;
-  text-align: left;
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.form-content h3.form-title {
-  margin-bottom: 30px;
-}
-
-.form-content p {
-  color: #fff;
-  text-align: left;
-  font-size: 17px;
-  font-weight: 300;
-  line-height: 20px;
-  margin-bottom: 30px;
-}
-
-.form-content label,
-.was-validated .form-check-input:invalid ~ .form-check-label,
-.was-validated .form-check-input:valid ~ .form-check-label {
-  color: #fff;
-}
-
-.form-content input[type="text"],
-.form-content input[type="password"],
-.form-content input[type="email"],
-.form-content input[type="file"],
-.form-content textarea,
-.form-content select {
-  width: 100%;
-  padding: 9px 20px;
-  text-align: left;
-  border: 0;
-  outline: 0;
-  border-radius: 6px;
-  background-color: #fff;
-  font-size: 15px;
-  font-weight: 300;
-  color: #8d8d8d;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  margin-top: 16px;
-}
-
-.form-content input[type="file"] {
-  margin-top: 0;
-}
-
-.btn-primary {
-  background-color: #6c757d;
-  outline: none;
-  border: 0px;
-  box-shadow: none;
-}
-
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active {
-  background-color: #495056;
-  outline: none !important;
-  border: none !important;
-  box-shadow: none;
-}
-
-.form-content textarea {
-  position: static !important;
-  width: 100%;
-  padding: 8px 20px;
-  border-radius: 6px;
-  text-align: left;
-  background-color: #fff;
-  border: 0;
-  font-size: 15px;
-  font-weight: 300;
-  color: #8d8d8d;
-  outline: none;
-  resize: none;
-  height: 120px;
-  -webkit-transition: none;
-  transition: none;
-  margin-bottom: 14px;
-}
-
-.form-content textarea:hover,
-.form-content textarea:focus {
-  border: 0;
-  background-color: #ebeff8;
-  color: #8d8d8d;
-}
-
-.mv-up {
-  margin-top: -9px !important;
-  margin-bottom: 8px !important;
-}
-
-.invalid-feedback {
-  color: #ff606e;
-}
-
-.valid-feedback {
-  color: #2acc80;
 }
 
 /**************************** Product Order Page ****************************/
